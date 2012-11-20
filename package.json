@@ -1,0 +1,26 @@
+{
+  "name": "glsl-parser",
+  "version": "0.0.0",
+  "description": "transform streamed glsl tokens into an ast",
+  "main": "index.js",
+  "dependencies": {
+    "glsl-tokenizer": "~0.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chrisdickinson/glsl-parser.git"
+  },
+  "keywords": [
+    "glsl",
+    "parser",
+    "ast",
+    "through",
+    "stream"
+  ],
+  "author": "Chris Dickinson <chris@neversaw.us>",
+  "license": "MIT"
+}
