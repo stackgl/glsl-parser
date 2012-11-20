@@ -1,7 +1,7 @@
 glsl-parser
 ===========
 
-a through stream that takes tokens from `glsl-tokenizer` and turns them into
+a through stream that takes tokens from [glsl-tokenizer](https://github.com/chrisdickinson/glsl-tokenizer) and turns them into
 an AST.
 
 ```javascript
@@ -63,7 +63,7 @@ legal & caveats
 known bugs
 ----------
 
-* because i am not smart enough to write a fully streaming parser, the current parser "cheats" a bit when it encounters a `expr` node! it actually waits until it has all the tokens it needs to build a tree for a given expression, then builds it and emits it as a single node. the `expr` parsing is heavily influence by [crockford's tdop article](http://javascript.crockford.com/tdop/tdop.html). the rest of the parser is heavily influenced by fever dreams.
+* because i am not smart enough to write a fully streaming parser, the current parser "cheats" a bit when it encounters a `expr` node! it actually waits until it has all the tokens it needs to build a tree for a given expression, then builds it and emits it as a single node. the `expr` parsing is heavily influenced by [crockford's tdop article](http://javascript.crockford.com/tdop/tdop.html). the rest of the parser is heavily influenced by fever dreams.
 
 * the parser might hit a state where it's looking at what *could be* an expression, or it could be a declaration --
 that is, the statement starts with a previously declared `struct`. it'll opt to pretend it's a declaration, but that
