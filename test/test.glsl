@@ -13,8 +13,14 @@ precision highp vec4;
 struct xxx {
   int y;
   float b;
-}
+} a = 2, b;
 
+struct {
+  xxx z;
+} www;
+struct gary {
+  vec4 busey;
+};
 varying vec2 vTexcoord;
 varying vec3 vPosition;
 uniform mat4 proj, view;
@@ -22,21 +28,27 @@ uniform mat4 proj, view;
     attribute vec3 position;
     attribute vec2 texcoord;
 
-int x(void) {
+int forwarddecl(vec2 c);
+
+int forwarddecl(vec2 c) {
 
 }
 
-int y() {
+int empty() {
 
 }
  
-int z(int a, int b) {
+int two(int a, int b) {
 
 }
 
-int w(int a) {
+int one(int a[2]) {
   do x; while(1);
 }
+
+int emptyname(vec2[4]);
+int emptynameemptyname(vec2, vec2);
+
 
 int first, second, third, fourth, fifth, sixth, seventh, eigth;
 
@@ -45,6 +57,8 @@ int first, second, third, fourth, fifth, sixth, seventh, eigth;
         vPosition = position;
         vec3 thing = vec2(1., 2.);
         int v_thing, garybusey;
+        thing.rgba = 2e10 + .2e2 + 1.e3 * 0xFaBc09 + (3 * v_thing);
+
         for(xxx i = 0; i < 10; ++i) {
           discard;
         }
@@ -54,7 +68,7 @@ int first, second, third, fourth, fifth, sixth, seventh, eigth;
         gl_Position = proj * view * // nope
         vec4(position, 1.0);
 
-        if(first < /*hello*/ y) { z; }
+        if(first <  y) { z; }
         if(second < y) z;
         if(third == y) z; else if(z == w) y;
         if(fourth == y) z; else if(z == w) { y; };
@@ -70,3 +84,4 @@ int first, second, third, fourth, fifth, sixth, seventh, eigth;
         break;
         continue;
     }
+
