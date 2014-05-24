@@ -85,3 +85,4 @@ int first, second, third, fourth, fifth, sixth, seventh, eigth;
         continue;
     }
 
+float distance = 1.0;
