@@ -4,7 +4,7 @@
   "description": "transform streamed glsl tokens into an ast",
   "main": "index.js",
   "dependencies": {
-    "glsl-tokenizer": "~0.0.2",
+    "glsl-tokenizer": "~0.0.9",
     "through": "~1.1.2"
   },
   "devDependencies": {},

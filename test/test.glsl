@@ -86,3 +86,7 @@ int first, second, third, fourth, fifth, sixth, seventh, eigth;
     }
 
 float distance = 1.0;
+
+vec4 c = any(lessThan(p, vec2(0.0)))||any(lessThan(vec2(1.0), p)) ? vec4(0.0): vec4(1.0);
+
+any(lessThan(p, y(x)))||any(lessThan(x, p));
