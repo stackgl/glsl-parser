@@ -1,11 +1,11 @@
 {
   "name": "glsl-parser",
-  "version": "1.0.0",
+  "version": "0.0.7",
   "description": "transform streamed glsl tokens into an ast",
   "main": "index.js",
   "dependencies": {
-    "glsl-tokenizer": "~0.0.9",
-    "through": "~1.1.2"
+    "glsl-tokenizer": "^1.0.0",
+    "through": "2.3.4"
   },
   "devDependencies": {},
   "scripts": {
