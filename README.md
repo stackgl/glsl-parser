@@ -9,7 +9,7 @@ A GLSL parser that takes tokens from
 [glsl-tokenizer](http://github.com/stackgl/glsl-tokenizer) and turns them into
 an AST.
 
-May either be used as a stream
+May either be used synchronously or as a stream.
 
 ## API
 
