@@ -2,18 +2,23 @@
   "name": "glsl-parser",
   "version": "1.0.1",
   "description": "transform streamed glsl tokens into an ast",
-  "main": "index.js",
+  "main": "stream.js",
   "dependencies": {
     "glsl-tokenizer": "^1.0.0",
-    "through": "2.3.4"
+    "through": "2.3.4",
+    "through2": "^0.6.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "glsl-tokenizer": "git://github.com/stackgl/glsl-tokenizer#2.0.0",
+    "tap-spec": "^1.0.1",
+    "tape": "^3.0.2"
+  },
   "scripts": {
-    "test": "node test/index.js"
+    "test": "node test/index.js | tap-spec"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/gl-modules/glsl-parser.git"
+    "url": "git://github.com/stackgl/glsl-parser.git"
   },
   "keywords": [
     "glsl",
