@@ -8,9 +8,7 @@ an AST.
 
 var tokenizer = require('glsl-tokenizer')()
   , fs = require('fs')
-  , parser = require('./index')
-
-var num = 0
+  , parser = require('glsl-parser')
 
 fs.createReadStream('test.glsl')
   .pipe(tokenizer)
