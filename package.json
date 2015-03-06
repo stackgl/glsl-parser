@@ -4,12 +4,11 @@
   "description": "transform streamed glsl tokens into an ast",
   "main": "stream.js",
   "dependencies": {
-    "glsl-tokenizer": "^1.0.0",
+    "glsl-tokenizer": "^2.0.0",
     "through": "2.3.4",
     "through2": "^0.6.3"
   },
   "devDependencies": {
-    "glsl-tokenizer": "git://github.com/stackgl/glsl-tokenizer#2.0.0",
     "tap-spec": "^1.0.1",
     "tape": "^3.0.2"
   },
