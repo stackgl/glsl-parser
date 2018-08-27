@@ -50,7 +50,7 @@ int emptyname(vec2[4]);
 int emptynameemptyname(vec2, vec2);
 
 
-int first, second, third, fourth, fifth, sixth, seventh, eigth;
+uint first, second, third, fourth, fifth, sixth, seventh, eigth;
 
     void main(){
         vTexcoord = texcoord;
