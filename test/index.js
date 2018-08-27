@@ -53,7 +53,7 @@ test('stream().program === array()', function(t) {
 
       var actual = Object.keys(ast.scope).sort()
       var expect = [
-          'a', 'b', 'c', 'eigth', 'empty', 'emptyname'
+          'a', 'b', 'c', 'distance', 'eigth', 'empty', 'emptyname'
         , 'emptynameemptyname', 'fifth', 'first', 'forwarddecl'
         , 'fourth', 'gary', 'main', 'one', 'position', 'proj'
         , 'second', 'seventh', 'sixth', 'texcoord', 'third', 'two'
