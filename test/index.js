@@ -10,7 +10,7 @@ var ParseArray  = require('../direct')
 var expectSelectors = require('./selectors-expected.json')
 var fixture = path.join(__dirname, 'fixture.glsl')
 
-test('selector stream', function(t) {
+test.only('selector stream', function(t) {
   var selectors = []
 
   fs.createReadStream(fixture)
@@ -20,6 +20,13 @@ test('selector stream', function(t) {
       selectors.push(selector(x))
     })
     .once('end', function() {
+      // console.log(selectors.length, expectSelectors.length)
+      // for (let i = 0; i < selectors.length; i++) {
+      //   if (selectors[i].length !== expectSelectors[i].length) {
+      //     console.log(i, selectors[i], expectSelectors[i])
+      //     break
+      //   }
+      // }
       t.deepEqual(selectors, expectSelectors)
       t.end()
     })
