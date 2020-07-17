@@ -17,8 +17,11 @@ function parseStream() {
     try {
         nodes = parser(data)
     } catch (error) {
+        if (typeof console) {
+          console.log(error)
+        }
         next(error)
-        return;
+        return
     }
     for (var i = 0; i < nodes.length; i++) {
       this.push(nodes[i])
