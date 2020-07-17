@@ -13,8 +13,16 @@ function parseStream() {
   return stream
 
   function write(data, _, next) {
-    var nodes = parser(data)
-
+    var nodes
+    try {
+        nodes = parser(data)
+    } catch (error) {
+        if (typeof console) {
+          console.log(error)
+        }
+        next(error)
+        return
+    }
     for (var i = 0; i < nodes.length; i++) {
       this.push(nodes[i])
     }
